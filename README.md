@@ -13,7 +13,16 @@ A todo app in PHP
 8. Copy the contents of `data/init.sql` to your clipboard.
 9. Paste the contents of your clipboard into the SQL-command window in adminer.
 10. Click the "Execute" button, this will create the table with three example todo items.
-11. Now browse to http://192.168.33.10, you should see three todo-items in your list.
+11. Update the `config/credentials.php` file to contain this:
+
+```php
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', 'root');
+define('DB_NAME', 'todo-app-db');
+```
+
+12. Now browse to http://192.168.33.10, you should see three todo-items in your list.
 
 # How to proceed
 Start by familiarizing yourself with the codebase. Look inside the `src/` folder. Some things to consider:
